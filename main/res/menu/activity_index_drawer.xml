@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connexion"
+
+            android:title="Connexion" />
+        <item
+            android:id="@+id/nav_accueil"
+
+            android:title="Accueil" />
+        <item
+            android:id="@+id/nav_demandes"
+
+            android:title="Demander un service" />
+        <item
+            android:id="@+id/nav_offres"
+
+            android:title="Offrir un service" />
+        <item
+            android:id="@+id/list_request"
+
+            android:title="Les Demandes" />
+        <item
+            android:id="@+id/list_offres"
+
+            android:title="Les Offres" />
+
+        <item
+            android:id="@+id/nav_utilisateur"
+
+            android:title="Utilisateurs" />
+        <item
+            android:id="@+id/nav_map"
+
+            android:title="Maps" />
+    </group>
+
+    <item android:title="Plus ...">
+        <menu>
+            <item
+                android:id="@+id/nav_parametres"
+
+                android:title="Parametres" />
+            <item
+                android:id="@+id/nav_log"
+
+                android:title="" />
+            <item
+                android:id="@+id/nav_deconnexion"
+
+                android:title="Deconnexion" />
+        </menu>
+    </item>
+
+</menu>

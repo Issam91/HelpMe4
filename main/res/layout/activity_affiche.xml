@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.amazigh.helpme.Affiche">
+
+
+    <LinearLayout android:id="@+id/Text"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dip">
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        style="@style/AppTheme" />
+
+    <ImageView
+        android:id="@+id/Image2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="5dp"
+        android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/log2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#2c4650"
+            android:textSize="30dip"
+            android:layout_gravity="right" />
+        <TextView
+            android:id="@+id/cat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#2b4249"
+            android:paddingLeft="100dip"
+            />
+        <TextView
+            android:id="@+id/pri2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#d72e31"
+            android:paddingLeft="100dip"
+            />
+
+
+        <TextView
+            android:id="@+id/desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF7F3300"
+            android:textSize="15dip"
+            />
+        <TextView
+            android:id="@+id/add2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dip"
+            android:textColor="#386826"
+            />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_call" />
+    </LinearLayout>
+
+</LinearLayout>

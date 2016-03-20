@@ -21,21 +21,21 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class RequestService extends AppCompatActivity implements View.OnClickListener {
-    EditText desc,address_r, title, datemax;
-    Button button;
-
-    Spinner category, prixmax, prixmin;
+public class OfferService extends AppCompatActivity implements View.OnClickListener {
+    EditText desc, title, datemax;
+    private Button button;
+    private Spinner category, prixmax, prixmin;
+    private EditText address_o;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.request_service);
+        setContentView(R.layout.offer_service);
         initSpinenrMonnaie();
         category = (Spinner) findViewById(R.id.categories);
         desc = (EditText) findViewById(R.id.description);
         title = (EditText) findViewById(R.id.title);
-        address_r = (EditText) findViewById(R.id.adress_r);
+        address_o = (EditText) findViewById(R.id.adress_o);
 
 
         prixmax = (Spinner) findViewById(R.id.maxPrice);
@@ -43,34 +43,6 @@ public class RequestService extends AppCompatActivity implements View.OnClickLis
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(this);
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.index, menu);
-        return true;
-
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        switch (item.getItemId()) {
-            case R.id.action_deconnexion:
-                Intent intent = new Intent(RequestService.this, Login.class);
-
-                startActivity(intent);
-                break;
-            case R.id.action_settings:
-                Toast.makeText(this,"parametres", Toast.LENGTH_SHORT).show();
-                break;
-
-        }
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void initSpinenrMonnaie() {
@@ -86,13 +58,39 @@ public class RequestService extends AppCompatActivity implements View.OnClickLis
         minPrice.setAdapter(adapter);
         maxPrice.setAdapter(adapter);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.index, menu);
+        return true;
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.action_deconnexion:
+                Intent intent = new Intent(OfferService.this, Login.class);
+                startActivity(intent);
+                break;
+            case R.id.action_settings:
+                Toast.makeText(this,"parametres", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
     @Override
     public void onClick(View v) {
         String title_str = title.getText().toString();
         String cat_str = category.getSelectedItem().toString();
         String desc_str = desc.getText().toString();
-        String address_str = address_r.getText().toString();
+        String address_str = address_o.getText().toString();
 
         String prixmin_str = prixmin.getSelectedItem().toString();
         String prixmax_str = prixmax.getSelectedItem().toString();
@@ -113,14 +111,14 @@ public class RequestService extends AppCompatActivity implements View.OnClickLis
                 String data = URLEncoder.encode("category", "UTF-8") + "=" + URLEncoder.encode(urls[0], "UTF-8");
                 data += "&" + URLEncoder.encode("title", "UTF-8") + "=" + URLEncoder.encode(urls[1], "UTF-8");
                 data += "&" + URLEncoder.encode("desc", "UTF-8") + "=" + URLEncoder.encode(urls[2], "UTF-8");
-                data += "&" + URLEncoder.encode("prixmax", "UTF-8") + "=" + URLEncoder.encode(urls[3], "UTF-8");
-                data += "&" + URLEncoder.encode("prixmin", "UTF-8") + "=" + URLEncoder.encode(urls[4], "UTF-8");
+                data += "&" + URLEncoder.encode("prixmin", "UTF-8") + "=" + URLEncoder.encode(urls[3], "UTF-8");
+                data += "&" + URLEncoder.encode("prixmax", "UTF-8") + "=" + URLEncoder.encode(urls[4], "UTF-8");
                 data += "&" + URLEncoder.encode("user", "UTF-8") + "=" + URLEncoder.encode(urls[5], "UTF-8");
                 data += "&" + URLEncoder.encode("address", "UTF-8") + "=" + URLEncoder.encode(urls[6], "UTF-8");
 
 
 
-                URL url = new URL("http://helpme.esy.es/request.php");
+                URL url = new URL("http://helpme.esy.es/offer.php");
                 Subscrib.senddata(url, data);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
@@ -133,7 +131,8 @@ public class RequestService extends AppCompatActivity implements View.OnClickLis
 
 
         protected void onPostExecute(String feed) {
-      Toast.makeText(getApplicationContext(),"Demande envoyée",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Offre envoyé",Toast.LENGTH_SHORT).show();
+
         }
     }
 }

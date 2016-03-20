@@ -2,19 +2,19 @@
     <string name="app_name">HelpMe</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password </string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Parametres</string>
+    <string name="action_deconnexion">Deconnexion</string>
     <string name="open">ouvrir</string>
     <string name="close">fermer</string>
     <string name="drawer_open">ouverture</string>
     <string name="drawer_close">fermeture</string>
-    <string-array name="Links">
-        <item>Connexion</item>
-        <item>Accueil</item>
-        <item>demande</item>
-        <item>offre</item>
-        <item>liste des services</item>
-        <item>liste des utilisateurs</item>
-        <item>Map</item>
-    </string-array>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_index">Index</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>

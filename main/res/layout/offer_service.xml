@@ -9,35 +9,35 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:textColor="#660099"
         android:layout_height="wrap_content"
+        android:textColor="#660099"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Demander un service"
-        android:id="@+id/textView6"
+        android:text="Offrir un service"
+        android:id="@+id/textView7"
         android:layout_margin="10dp" />
 
     <Spinner
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/categories"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp" />
 
     <EditText
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title"
-        android:text="Titre" />
+        android:text="Titre"
+        android:layout_margin="10dp" />
 
     <EditText
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/description"
-        android:text="Description" />
+        android:text="Description"
+        android:layout_margin="10dp" />
 
     <TextView
         android:layout_margin="10dp"
@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/adress_r"
+        android:id="@+id/adress_o"
         android:text="Adresse" />
     <Button
 

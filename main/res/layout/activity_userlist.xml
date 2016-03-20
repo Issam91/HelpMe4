@@ -35,7 +35,7 @@
         android:background="#3F51B5"
         android:id="@+id/drawerList"
         android:divider="#ffffff"
-        android:entries="@array/Links"
+
         android:layout_width="240dp"
         android:gravity="left"
         android:layout_height="match_parent"
