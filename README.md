@@ -16,7 +16,6 @@ services de (bricolages, activités ménagères, cours de soutien ...) dérivée
 les utilisateurs géolocalisés peuvent publier des demandes d'aides dans divers domaines et rechercher et consulter 
 parmis les offres présentes d'autres personnes pour subvenir à ces besoins.
 
-
 Compilation:
 ===========================
 
